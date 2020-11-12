@@ -38,7 +38,8 @@ const App = () => {
   // Remove a fruit from the array in React state at random
   const removeRandomFruit = () => {
     const randomIndex = Math.random() * fruits.length
-    // Make a working copy of the array in React State:
+    // Make a working copy of the array using Array.from()
+    // since we can't modify React state array directly:
     const newFruits = Array.from(fruits)
     // Remove one fruit at the selected random index:
     newFruits.splice(randomIndex, 1)
