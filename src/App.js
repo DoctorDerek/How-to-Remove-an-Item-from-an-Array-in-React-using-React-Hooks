@@ -1,18 +1,15 @@
 import React, { useState } from "react"
 import "./styles.css"
 
+// In this example, we have 8 fruit emoji that we will choose from:
+const FRUIT_EMOJI = ["🍌", "🍉", "🍓", "🥝", "🍍", "🍑", "🥭", "🍒"]
+
+// Initial state is an array with [fruit, key] for each fruit, so we need
+// to generate a random key for each fruit in the list. That's because you
+// shouldn't use index as the React key prop for dynamic lists of items.
+const initialFruitsWithKeys = FRUIT_EMOJI.map((fruit) => [fruit, Math.random()])
+
 const App = () => {
-  // In this example, we have 8 fruit emoji that we will choose from:
-  const FRUIT_EMOJI = ["🍌", "🍉", "🍓", "🥝", "🍍", "🍑", "🥭", "🍒"]
-
-  // Initial state is an array with [fruit, key] for each fruit, so we need
-  // to generate a random key for each fruit in the list. That's because you
-  // shouldn't use index as the React key prop for dynamic lists of items.
-  const initialFruitsWithKeys = FRUIT_EMOJI.map((fruit) => [
-    fruit,
-    Math.random()
-  ])
-
   const [fruits, setFruits] = useState(initialFruitsWithKeys)
 
   const addFruit = () => {
