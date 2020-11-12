@@ -44,16 +44,6 @@ const App = () => {
     newFruits.splice(randomIndex, 1)
     // Update React state using the useState hook:
     setFruits((fruits) => newFruits)
-
-    // Alternative approach that would work the same:
-    /**
-     * setFruits((fruits) => {
-     *   fruits.splice(randomIndex, 1)
-     *   return fruits
-     * })
-     **/
-    // This would work because the callback function passed to
-    // the useState hook gives us a working copy we can modify.
   }
 
   return (
