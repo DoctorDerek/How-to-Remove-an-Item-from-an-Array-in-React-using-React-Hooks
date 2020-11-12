@@ -10,17 +10,18 @@ const FRUIT_EMOJI = ["🍌", "🍉", "🍓", "🥝", "🍍", "🍑", "🥭", "�
 const initialFruitsWithKeys = FRUIT_EMOJI.map((fruit) => [fruit, Math.random()])
 
 const App = () => {
+  // React Hooks to set the initial state and get the setter function:
   const [fruits, setFruits] = useState(initialFruitsWithKeys)
 
   const addFruit = () => {
-    // Add a random fruit to React State using the useState hook
+    // Add a random fruit to React State using the useState hook:
     const randomIndex = Math.floor(Math.random() * FRUIT_EMOJI.length)
     const randomFruit = FRUIT_EMOJI[randomIndex]
     const randomFruitWithKey = [randomFruit, Math.random()]
     setFruits((fruits) => [...fruits, randomFruitWithKey])
   }
 
-  // Remove a single fruit by looking it up in React State by its unique key.
+  // Remove a single fruit by looking it up in React State by its unique key:
   const removeFruit = (targetKey) => {
     setFruits((fruits) => fruits.filter(([fruit, key]) => key !== targetKey))
   }
@@ -28,14 +29,14 @@ const App = () => {
   // like the ES6 Map class, since what we really have here is a "hash map";
   // the .filter() method will have worse performance for looking up items.
 
-  // Remove all of a fruit by filtering the React State by fruit and not key.
+  // Remove all of a fruit by filtering the React State by fruit and not key:
   const removeAllOfThisFruit = (targetFruit) => {
     setFruits((fruits) =>
       fruits.filter(([fruit, key]) => fruit !== targetFruit)
     )
   }
 
-  // Remove a fruit from the array in React state at random
+  // Remove a fruit from the array in React state at random:
   const removeRandomFruit = () => {
     const randomIndex = Math.random() * fruits.length
     // Make a working copy of the array using Array.from()
