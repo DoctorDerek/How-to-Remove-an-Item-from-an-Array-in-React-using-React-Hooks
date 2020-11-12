@@ -1,0 +1,57 @@
+/* Color palette courtesy of:
+ * https://colorhunt.co/palette/220192 */
+body {
+  background-color: #ffdada;
+}
+.App {
+  font-family: "Racing Sans One";
+  text-align: center;
+  background-color: #dbf6e9;
+  max-width: 500px;
+  margin: auto;
+  padding: 1px 0px;
+}
+h1,
+h2,
+ul,
+table {
+  margin: 20px auto;
+  width: 100%;
+  max-width: 400px;
+}
+h2 {
+  border: 3px double #31326f;
+}
+h3 {
+  width: 100%;
+}
+
+ul,
+table {
+  background-color: #9ddfd3;
+  padding: 5px;
+}
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+li,
+tr {
+  background-color: #31326f;
+  margin: 5px;
+}
+
+li {
+  width: 75px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+li button {
+  width: 40px;
+  height: 40px;
+}
