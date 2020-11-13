@@ -20,7 +20,7 @@ it("Adds a new fruit to the list when clicking `Add Random Fruit`", () => {
 })
 
 it("Removes a fruit from the list when clicking on it", () => {
-  const initialCount = app.find("ul.fruit-list li").children().length
+  const initialCount = app.find("ul.fruit-list li").length
   app
     .find("ul.fruit-list li")
     .find("button.remove-fruit")
