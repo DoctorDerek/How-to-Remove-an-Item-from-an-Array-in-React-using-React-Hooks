@@ -19,6 +19,12 @@ it("Adds a new fruit to the list when clicking `Add Random Fruit`", () => {
   expect(app.find("ul.fruit-list li").length).toEqual(initialCount + 1)
 })
 
+it("Removes a random fruit when clicking `Remove a Random Fruit` button", () => {
+  const initialCount = app.find("ul.fruit-list li").length
+  app.find("button.remove-random-fruit").simulate("click")
+  expect(app.find("ul.fruit-list li").length).toEqual(initialCount - 1)
+})
+
 it("Removes a fruit from the list when clicking on it", () => {
   const initialCount = app.find("ul.fruit-list li").length
   app
@@ -55,10 +61,4 @@ it("Removes all of the right fruit from the list when clicking `Remove All {frui
       .find("ul.fruit-list li")
       .findWhere((n) => n.type() === "li" && n.text() === fruit).length
   ).toEqual(0)
-})
-
-it("Removes a random fruit when clicking `Remove a Random Fruit` button", () => {
-  const initialCount = app.find("ul.fruit-list li").length
-  app.find("button.remove-random-fruit").simulate("click")
-  expect(app.find("ul.fruit-list li").length).toEqual(initialCount - 1)
 })
