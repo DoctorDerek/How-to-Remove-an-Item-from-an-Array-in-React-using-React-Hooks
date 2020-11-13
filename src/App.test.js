@@ -1,11 +1,11 @@
 import React from "react"
 import { shallow, configure } from "enzyme"
 import Adapter from "enzyme-adapter-react-16"
+// enzyme-adapter-react-17 not available yet
 import App from "./App"
 
 // Required enzyme configuration
 configure({ adapter: new Adapter() })
-// enzyme-adapter-react-17 not available yet
 
 let app
 beforeEach(() => {
