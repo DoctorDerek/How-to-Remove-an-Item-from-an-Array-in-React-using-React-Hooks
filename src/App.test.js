@@ -13,13 +13,13 @@ beforeEach(() => {
   app = shallow(<App />)
 })
 
-it("Adds a new fruit to the list when clicking `Add Fruit`", () => {
-  const initialCount = app.find("ul").children().length
+it("Adds a new fruit to the list when clicking `Add Random Fruit`", () => {
+  const initialCount = app.find("ul.fruit-list li").length
   app.find("button.add-fruit").first().simulate("click")
-  expect(app.find("ul").children().length).toEqual(initialCount + 1)
+  expect(app.find("ul.fruit-list li").length).toEqual(initialCount + 1)
 })
 
-it("Removes a fruit from the list when clicking `X`", () => {
+it("Removes a fruit from the list when clicking on it", () => {
   const initialCount = app.find("ul.fruit-list li").children().length
   app
     .find("ul.fruit-list li")
@@ -29,7 +29,7 @@ it("Removes a fruit from the list when clicking `X`", () => {
   expect(app.find("ul.fruit-list li").length).toEqual(initialCount - 1)
 })
 
-it("Removes the right fruit from the list when clicking `X`", () => {
+it("Removes the right fruit from the list when clicking on it", () => {
   const aFruit = app.find("ul.fruit-list li").first()
   const initialKey = aFruit.key()
   expect(
