@@ -15,8 +15,8 @@ beforeEach(() => {
 
 it("Adds a new fruit to the list when clicking `Add Fruit`", () => {
   const initialCount = app.find("ul").children().length
-  app.find("button.remove-fruit").first().simulate("click")
-  expect(app.find("ul").children().length).toEqual(initialCount - 1)
+  app.find("button.add-fruit").first().simulate("click")
+  expect(app.find("ul").children().length).toEqual(initialCount + 1)
 })
 
 it("Removes a fruit from the list when clicking `X`", () => {
