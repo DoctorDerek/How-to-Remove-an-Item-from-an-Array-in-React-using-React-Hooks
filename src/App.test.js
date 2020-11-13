@@ -57,7 +57,7 @@ it("Removes all of the right fruit from the list when clicking `Remove All {frui
   ).toEqual(0)
 })
 
-it("Removes a random fruit when clicking `Remove a Random fruit` button", () => {
+it("Removes a random fruit when clicking `Remove a Random Fruit` button", () => {
   const initialCount = app.find("ul.fruit-list li").length
   app.find("button.remove-random-fruit").simulate("click")
   expect(app.find("ul.fruit-list li").length).toEqual(initialCount - 1)
