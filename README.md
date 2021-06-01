@@ -4,4 +4,4 @@
 
 🔬 CodeSandbox Live Demo: https://codesandbox.io/s/geqbp
 
-📱 CodeSandbox Mobile Demo: https://geqbp.csb.app/
+📱 Full Screen Demo: https://geqbp.csb.app/
