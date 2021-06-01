@@ -2,4 +2,6 @@
 
 🧪 Testing React Hooks with Enzyme
 
-🔬 CodeSandbox Live Demo: https://geqbp.csb.app/ (full-screen demo) and https://codesandbox.io/s/geqbp (source code + demo)
+🔬 CodeSandbox Live Demo: https://codesandbox.io/s/geqbp (source code + demo)
+
+📱 CodeSandbox Mobile Demo: https://geqbp.csb.app/ (full-screen demo)
