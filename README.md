@@ -2,4 +2,4 @@
 
 🧪 Testing React Hooks with Enzyme
 
-🔬 CodeSandbox Live Demo: https://codesandbox.io/s/github/DoctorDerek/remove-item-react-hooks
+🔬 CodeSandbox Live Demo: https://geqbp.csb.app/ (full-screen demo) and https://codesandbox.io/s/geqbp (source code + demo)
